@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aqua;">
+    <h1>Student Registration Form</h1>
+    <form action="welcome.html" novalidate autocomplete="on" method="get" target="_self">
+        <fieldset>
+        <legend>Personal Information</legend>
+
+        
+
+        <label for="r_fullname">Full Name:</label>
+        <input type="text" id="r_fullname" placeholder="Enter Your Name" minlength="3" maxlength="50" />
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" multiple name="reg_emmail" placeholder="Enter Your Email" required />
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="reg_password"  required/>
+        <br><br>
+
+        <label>Phone No:</label>
+        <input type="tel"  name="reg_phone" placeholder="11111-11111" required/>
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="reg_age" min="3" max="50" required/>
+        <br><br>
+
+       <label>Gender:</label>
+        <input type="radio" checked name="reg_gender" value="Male"/><label>Male</label>
+        <input type="radio" name="reg_gender" value="Female"/><label>Female</label>
+        <br><br> 
+
+    </fieldset>
+    <fieldset>
+        <legend>Preferences & Extras</legend>
+        <label>Upload Profile Piture:</label>
+        <input type="file" name="reg_file" required/>
+        <br><br>
+
+        <label>Color:</label>
+        <input type="color" name="reg_color" required/>
+        <br><br>
+
+        <label>Search Course:</label>
+        <input type="search" name="reg_S_Course" required/>
+        <br><br>
+
+        <label>Course Interest Range:</label>
+        <input type="range" name="reg_range" required/>
+        <br><br>
+
+        <label>Personal Website:</label>
+        <input type="url" name="reg_website" required/>
+        <br><br>
+
+        <label>Course Type:</label>
+        <select name="reg_course" >
+            <optgroup label="Engg">
+            <option selected value="CE">CE</option>
+            <option value="ME">EE</option>
+            <option value="EC">EC</option>
+        </optgroup>
+        <optgroup label="Management">
+            <option value="BBA">BBA</option>
+            <option value="MBA">MBA</option>
+        </optgroup>
+        </select>
+        <br><br>
+
+        <label>Prefered country:</label>
+        <input list="Countries" name="" id="" required>
+        <datalist id="Countries" name="reg_country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+        </datalist>
+        <br><br>
+
+        <label>Agree to Terms:</label>
+        <input type="checkbox" name="reg_agree" value="I agree"><label for="">I Agree</label>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Date & Time InFo</legend>
+
+        <label>Select DOB:</label>
+        <input type="date" name="reg_dob">
+        <br><br>
+
+        <label>Select the Time:</label>
+        <input type="time" name="reg_time">
+        <br><br>
+
+        <label>Select Month:</label>
+        <input type="month" name="reg_month">
+        <br><br>
+
+        <label>Select Week:</label>
+        <input type="week" name="reg_week">
+        <br><br>
+
+        <label>Select Date and Time:</label> <br>
+        <input type="datetime-local" name="reg_date_time">
+        <br><br>
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Form Controls</legend>
+
+        <input type="submit" value="Submit" style="background-color: green;">
+      
+
+        <input type="reset" value="Reset" style="background-color: red;">
+        <br><br>
+
+    </fieldset>
+    </form>
+
+</body>
+</html>

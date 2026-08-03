@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+</head>
+<body style="background-color: aqua;">
+    <h1>Employee Registration Form</h1>
+
+    <form action="welcome.html" method="get" target="_self" autocomplete="on" novalidate>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="r_employeeId">Employee ID:</label>
+            <input type="text" id="r_employeeId" name="reg_employeeId" placeholder="Enter Employee ID" minlength="3" maxlength="50" required>
+            <br><br>
+
+            <label>Full Name:</label>
+            <input type="text" id="r_firstname" name="reg_firstname" placeholder="First Name" minlength="3" maxlength="50" required>
+            <input type="text" id="r_middlename" name="reg_middlename" placeholder="Middle Name" minlength="3" maxlength="50">
+            <input type="text" id="r_lastname" name="reg_lastname" placeholder="Last Name" minlength="3" maxlength="50" required>
+            <br><br>
+
+            <label for="r_email">Email:</label>
+            <input type="email" id="r_email" name="reg_email" placeholder="Enter Your Email" required>
+            <br><br>
+
+            <label for="r_password">Password:</label>
+            <input type="password" id="r_password" name="reg_password" placeholder="Enter Password" required>
+            <br><br>
+
+            <label for="r_phone">Phone No:</label>
+            <input type="tel" id="r_phone" name="reg_phone"  placeholder="11111-11111" required>
+            <br><br>
+
+            <label for="r_age">Age:</label>
+            <input type="number" id="r_age" name="reg_age" min="18" max="60" placeholder="Enter Age" required>
+            <br><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="reg_gender" value="Male" checked>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="reg_gender" value="Female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="reg_gender" value="Other">
+            <label for="other">Other</label>
+            <br><br>
+
+            <label for="r_dob">Date of Birth:</label>
+            <input type="date" id="r_dob" name="reg_dob">
+            <br><br>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Job Information</legend>
+
+            <label for="r_department">Department:</label>
+            <select id="r_department" name="reg_department">
+                <option value="">-- Select Department --</option>
+                <option value="Computer Science & IT">Computer Science & IT</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Finance & Accounting">Finance & Accounting</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Sales">Sales</option>
+                <option value="Operations">Operations</option>
+                <option value="Research & Development">Research & Development</option>
+                <option value="Administration">Administration</option>
+                <option value="Customer Support">Customer Support</option>
+                <option value="Production">Production</option>
+                <option value="Quality Assurance">Quality Assurance</option>
+                <option value="Legal">Legal</option>
+                <option value="Security">Security</option>
+                <option value="Procurement">Procurement</option>
+                <option value="Logistics">Logistics</option>
+            </select>
+            <br><br>
+
+
+            <label for="r_designation">Designation:</label>
+            <input type="text" id="r_designation" name="reg_designation" placeholder="Enter Designation" minlength="3" maxlength="50" required>
+            <br><br>
+
+
+            <label for="r_joiningdate">Joining Date:</label>
+            <input type="date" id="r_joiningdate" name="reg_joiningdate" required>
+            <br><br>
+
+
+            <label for="r_salary">Salary:</label>
+            <input type="number" id="r_salary" name="reg_salary"  placeholder="Enter Salary" min="1000" required>
+            <br><br>
+
+
+            <label>Employment Type:</label>
+
+            <input type="radio" id="fulltime" name="reg_employment" value="Full Time" checked>
+            <label for="fulltime">Full Time</label>
+
+            <input type="radio" id="parttime" name="reg_employment" value="Part Time">
+            <label for="parttime">Part Time</label>
+
+            <input type="radio" id="intern" name="reg_employment" value="Intern">
+            <label for="intern">Intern</label>
+            <br><br>
+
+
+            <label for="r_experience">Experience:</label>
+            <input type="number" id="r_experience" name="reg_experience" placeholder="Years of Experience" min="0" max="40">
+            <br><br>
+
+
+            <label for="r_shift">Preferred Shift:</label>
+            <select id="r_shift" name="reg_shift">
+                <option value="">-- Select Shift --</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Night">Night</option>
+            </select>
+            <br><br>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Additional Information</legend>
+
+            <label for="r_photo">Upload Profile Picture:</label>
+            <input type="file" id="r_photo" name="reg_photo" accept="image/*">
+            <br><br>
+
+
+            <div style="display: flex; align-items: center;">
+            <label for="r_address" style="margin-right: 20px;">Address:</label>
+            <textarea id="r_address" name="reg_address" rows="7" cols="45" placeholder="Enter Your Address"></textarea>
+            </div>
+            <br>
+
+            <label for="r_city">City:</label>
+            <input type="text" id="r_city" name="reg_city" placeholder="Enter City">
+            <br><br>
+
+
+            <label for="r_state">State:</label>
+            <select id="r_state" name="reg_state" >
+
+                  <option value="">-- Select State --</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+            </select>
+            <br><br>
+
+            <label for="r_country">Country:</label>
+            <select id="r_country" name="reg_country">
+                <option value="">-- Select Country --</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+            </select>
+            <br><br>
+
+
+            <label for="r_website">Personal Website:</label>
+            <input type="url" id="r_website" name="reg_website" placeholder="https://example.com">
+            <br><br>
+
+            <label for="r_skills">Skills:</label>
+            <input type="text" id="r_skills" name="reg_skills" placeholder="Enter Your Skills">
+            <br><br>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Date & Time Info</legend>
+
+            <label for="r_time">Select Joining Time:</label>
+            <input type="time" id="r_time" name="reg_time">
+            <br><br>
+
+
+            <label for="r_month">Select Month:</label>
+            <input type="month" id="r_month" name="reg_month">
+            <br><br>
+
+            <label for="r_week">Select Week:</label>
+            <input type="week" id="r_week" name="reg_week">
+            <br><br>
+
+            <label for="r_datetime">Select Date and Time:</label>
+            <input type="datetime-local" id="r_datetime" name="reg_datetime">
+            <br><br>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Form Controls</legend>
+
+            <label>
+            <input type="checkbox"name="reg_terms"value="Yes"required>
+             I Agree to Terms and Conditions
+            </label>
+            <br><br>
+
+            <input style="background-color: green;" type="submit" value="Register ">
+            <input style="background-color: red;" type="reset" value="Reset ">
+
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>

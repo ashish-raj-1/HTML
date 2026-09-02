@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: rgb(12, 133, 199);
+    }
+
+    h2{
+      text-align: center;
+      background-color: aqua;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    .photo
+    {
+      width:20%;
+    }
+    .photo img{
+  
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      background-color: rgb(57, 215, 17);
+      border: 2px solid rgb(68, 13, 216);
+      border-radius: 5px;
+
+    }
+    .photo img:hover
+    {
+      transform: scale(1.05);
+    }
+    .gallery
+    {
+      display:flex;
+      gap:30px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
+    footer {
+      background-color: aqua;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    @media (max-width:700px) {
+        .photo
+        {
+          width: 40%;
+        }
+    }
+    @media (max-width:400px) {
+        .photo
+        {
+          width: 80%;
+        }
+    }
+  </style>
+</head>
+<body>
+  <h2>PHOTO GALLERY </h2>
+  <div class="gallery">
+
+        <div class="photo"><img src="File/animal.jpg" alt="Photo 1"></div>
+        <div class="photo"><img src="File/environment.jpg" alt="Photo 2"></div>
+        <div class="photo"><img src="File/images (1).jpg" alt="Photo 3"></div>
+        <div class="photo"><img src="File/images (2).jpg" alt="Photo 4"></div>
+        <div class="photo"><img src="File/images (3).jpg" alt="Photo 5"></div>
+        <div class="photo"><img src="File/images (4).jpg" alt="Photo 6"></div>
+        <div class="photo"><img src="File/images (5).jpg" alt="Photo 7"></div>
+        <div class="photo"><img src="File/images.jpg" alt="Photo 8"></div>
+        <div class="photo"><img src="File/asshishraj.png" alt="Photo "></div>
+        <div class="photo"><img src="File/adarshraj.png" alt="Photo "></div>
+        <div class="photo"><img src="File/ashishkumar.png" alt="Photo "></div>
+        <div class="photo"><img src="File/amankumar.png" alt="Photo "></div>
+        <div class="photo"><img src="File/anshpandey.jpeg" alt="Photo "></div>
+        <div class="photo"><img src="File/sachin.jpeg" alt="Photo "></div>
+       
+    </div>
+
+    <footer>
+        © 2026 Photo Gallery | All Rights Reserved
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        h1 {
+            color: darkblue;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1><U>STUDENT REGISTRATION FORM</U></h1>
+    <form id="studentForm" onsubmit="return validateMyForm()" style="border: 2px solid black; background-color: aqua; width: 470px; padding-left:50px; padding: 20px;">
+        Enrollment Number:<br>
+        <input type="text" id="enrollment"><br><br>
+        Name:<br>
+        <input type="text" id="name"><br><br>
+        Email ID:<br>
+        <input type="email" id="email"><br><br>
+        Password:<br>
+        <input type="password" id="password"><br><br>
+        Confirm Password:<br>
+        <input type="password" id="confirmPassword"><br><br>
+        Phone Number:<br>
+        <input type="text" id="phone"><br><br>
+        Address:<br>
+        <textarea id="address" rows="3" cols="30"></textarea><br><br>
+        Gender:<br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+        Branch:<br>
+        <select id="branch">
+            <option value="">--Select Branch--</option>
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="IT Engineering">IT Engineering</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Civil">Civil</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateMyForm() {
+            let enrollment = document.getElementById("enrollment").value.trim();
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let phone = document.getElementById("phone").value.trim();
+            let address = document.getElementById("address").value.trim();
+            let gender = document.querySelector('input[name="gender"]:checked');
+            let branch = document.getElementById("branch").value;
+
+            if (enrollment === "" || name === "" || email === "" || password === "" || confirmPassword === "" || phone === "" || address === "" || !gender || branch === "") {
+                alert("Please fill all details.");
+                return false;
+            }
+
+            let enrollmentPattern = /^[0-9]{11}$/;
+
+            if (!enrollment.match(enrollmentPattern)) {
+                alert("Enrollment number must contain exactly 11 digits.");
+                return false;
+            }
+
+            let namePattern = /^[A-Za-z ]{3,40}$/;
+
+            if (!name.match(namePattern)) {
+                alert("Name must contain only letters and spaces.");
+                return false;
+            }
+
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@(gmail|yahoo)\.com$/;
+
+            if (!email.match(emailPattern)) {
+                alert("Enter a valid Gmail or Yahoo email address.");
+                return false;
+            }
+
+            let passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$!]).{8,}$/;
+
+            if (!password.match(passwordPattern)) {
+                alert("Password must be at least 8 characters and contain uppercase, lowercase, number and special character.");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Password and Confirm Password do not match.");
+                return false;
+            }
+
+            let phonePattern = /^[6-9][0-9]{9}$/;
+
+            if (!phone.match(phonePattern)) {
+                alert("Enter a valid 10-digit Indian mobile number.");
+                return false;
+            }
+
+            if (address.length < 10) {
+                alert("Address must contain at least 10 characters.");
+                return false;
+            }
+
+            let addressPattern = /^[A-Za-z0-9 ,.-]{10,150}$/;
+
+            if (!address.match(addressPattern)) {
+                alert("Address contains invalid characters.");
+                return false;
+            }
+
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+    </script>
+</body>
+
+</html>
